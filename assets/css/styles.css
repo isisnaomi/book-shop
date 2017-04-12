@@ -1,0 +1,34 @@
+body
+{
+    background-color: #f2f5f7;
+}
+a
+{
+    color: #4db1c4;
+}
+.container-fluid
+{
+    padding: 0;
+}
+.navbar-brand
+{
+    position: absolute;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: black;
+}
+.navbar
+{
+    padding-top: 15px;
+
+    background: white;
+}
+.navbar-search
+{
+    position: absolute;
+    right: 20px;
+
+    width: 200px;
+}
