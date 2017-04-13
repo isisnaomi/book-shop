@@ -7,7 +7,7 @@ function run_sql_query($query){
   $password = "root";
   $db = "bookshop";
 
-  $connection = mysqli_connect("localhost", "root", "root", $db);
+  $connection = mysqli_connect($server, $user, $password, $db);
 
   //Verifying connection
   if (!$connection) {
