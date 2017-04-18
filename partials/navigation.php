@@ -3,9 +3,10 @@
     <div class="container">
       <div class="navbar-search">
 
+
           <form action="/book-store/search-result.php" method="get">
             <div class="input-group">
-              <input type="text" class="form-control" name="search-input" placeholder=" Search book...">
+              <input type="text" class="form   -control" name="search-input" placeholder=" Search book...">
 
             </div><!-- /input-group -->
           </form>
@@ -34,7 +35,7 @@
                     <a href="#">Shopping Cart</a>
                 </li>
                 <li>
-                    <a href="#">User</a>
+                    <a onclick="document.getElementById('login-modal').style.display='block'" style="width:auto; cursor: pointer">Login</a>
                 </li>
             </ul>
         </div>
