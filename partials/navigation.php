@@ -1,3 +1,4 @@
+
 <!-- Navigation -->
 <nav class="navbar  navbar-fixed-top" role="navigation">
     <div class="container">
@@ -35,7 +36,19 @@
                     <a href="#">Shopping Cart</a>
                 </li>
                 <li>
-                    <a onclick="document.getElementById('login-modal').style.display='block'" style="width:auto; cursor: pointer">Login</a>
+                    <?php
+
+                    session_start();
+
+                    if(isset($_SESSION['actual_username'])){
+                        echo '<a onclick="document.getElementById(\'login-modal\').style.display=\'block\'"'.
+                                'style="width:auto; cursor: pointer">Logout</a>';
+                    }else{
+                        echo '<a onclick="document.getElementById(\'login-modal\').style.display=\'block\'"'.
+                            'style="width:auto; cursor: pointer">Login</a>';
+                    }
+
+                    ?>
                 </li>
             </ul>
         </div>
@@ -43,3 +56,5 @@
     </div>
     <!-- /.container -->
 </nav>
+
+<?php include 'partials/login.php';?>

@@ -9,7 +9,7 @@ $book_catalog = list_books();
 <?php include 'partials/head.php';?>
 <body>
 <?php include 'partials/navigation.php';?>
-<?php include 'partials/login.php';?>
+
 
     <!-- Page Content -->
     <div class="container-fluid">

@@ -26,4 +26,3 @@ function run_sql_query($query){
 
 }
 
- ?>

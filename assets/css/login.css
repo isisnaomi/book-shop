@@ -48,7 +48,7 @@
     font-family: "Roboto", sans-serif;
 }
 
-.modal-form button {
+.modal-form .btn-submit {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
@@ -62,7 +62,7 @@
     transition: all 0.3 ease;
     cursor: pointer;
 }
-.modal-form button:hover,.form button:active,.form button:focus {
+.modal-form .btn-submit:hover,.form button:active,.form button:focus {
     background: #98dae7;
 }
 .modal-form .message {
