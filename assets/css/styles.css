@@ -32,3 +32,13 @@ a
 
     width: 200px;
 }
+
+.users-table {
+    background-color: #59d959;
+    margin-top: 10px;
+}
+
+.users-table thead{
+    background-color: #82ae8a;
+    margin-top: 50px;
+}
