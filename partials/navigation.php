@@ -35,19 +35,22 @@
                 <li>
                     <a href="#">Shopping Cart</a>
                 </li>
+                    <?php
+                    session_start();
+                    if($_SESSION['user_type'] == 'admin') {
+                        echo ' <li><a href="manage-accounts.php">Manage accounts</a></li>';
+                    }
+                    ?>
                 <li>
                     <?php
 
-                    session_start();
+                    if($_SESSION['actual_username'] != ''){
+                        echo '<a href="functions/logout_user.php">Logout</a>';
 
-                    if(isset($_SESSION['actual_username'])){
-                        echo '<a onclick="document.getElementById(\'login-modal\').style.display=\'block\'"'.
-                                'style="width:auto; cursor: pointer">Logout</a>';
                     }else{
                         echo '<a onclick="document.getElementById(\'login-modal\').style.display=\'block\'"'.
                             'style="width:auto; cursor: pointer">Login</a>';
                     }
-
                     ?>
                 </li>
             </ul>
@@ -57,4 +60,10 @@
     <!-- /.container -->
 </nav>
 
-<?php include 'partials/login.php';?>
+<?php
+include 'partials/login.php';
+
+if(isset($_SESSION['status_message']) && $_SESSION['status_message'] != ''){
+    include 'partials/info-modal.php';
+}
+?>

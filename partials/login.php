@@ -1,5 +1,4 @@
 
-<!-- Page Content -->
 <div id="login-modal" class="login-page modal">
     <div class="modal-form">
         <span onclick="document.getElementById('login-modal').style.display='none'"
