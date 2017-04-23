@@ -1,9 +1,12 @@
+<?php include 'functions/check_privileges.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'partials/head.php';?>
 
 <body>
 <?php include 'partials/navigation.php'; ?>
+
+
 <div class="container">
   <div class="form--box">
     <div class="row">
@@ -31,7 +34,7 @@
                 '<td style="display: none">'.$user['id'].'</th>'.
                 '<td>'.$user['username'].'</th>'.
                 '<td>'.$user['type'].'</th>'.
-                '<td><a href="edit-user.php?'.$id.'" class="btn btn-xs btn-warning">Edit user</a>'.
+                '<td><a href="form-edit-user.php?user_id='.$id.'" class="btn btn-xs btn-warning">Edit user</a>'.
                 '<a name="'.$id.'" onclick="confirmDelete(this)" class="btn btn-xs btn-danger">Delete user</a></td>'.
                 '</tr>';
           }

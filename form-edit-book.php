@@ -1,3 +1,4 @@
+<?php include 'functions/check_privileges.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php

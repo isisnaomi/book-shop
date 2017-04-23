@@ -1,3 +1,4 @@
+<?php include 'functions/check_privileges.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'partials/head.php';?>
@@ -12,19 +13,19 @@
       </div>
 
       <div class="col-sm-8 col-sm-offset-2">
-        <form name="create-user-form" action="functions/create_user.php" onsubmit="return validate()" method="post">
+        <form name="create-user-form" action="functions/create_user.php" onsubmit="return validate(this)" method="post">
           <div class="form-group">
-            <label for="name">Username:</label>
-            <input type="text" class="form-control" id="name" name="name">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="name" name="username">
           </div>
           <div class="form-group">
-            <label for="author">Password:</label>
-            <input type="password" class="form-control" id="author" name="author">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="author" name="password">
           </div>
 
           <div class="form-group">
-            <label for="rating">User privileges:</label>
-            <select class="form-control" id="category" name="category">
+            <label for="type">User privileges:</label>
+            <select class="form-control" id="category" name="type">
               <option>admin</option>
               <option>user</option>
             </select>
@@ -42,20 +43,24 @@
 
 <script type="text/javascript">
 
-    function validate(){
+  function validate(form){
 
-      var username = document.forms["create-user-form"]["username"].value;
-      var password = document.forms["create-user-form"]["password"].value;
-      debugger;
-      if (username.length < 5) {
-        alert("The username field must be at least 5 characters");
-        return false;
-      }
-      if (password.length < 5) {
-        alert("The password field must be at least 5 characters");
-        return false;
-      }
+    var username = document.forms["create-user-form"]["username"].value;
+    var password = document.forms["create-user-form"]["password"].value;
 
+    if (username.length < 5 || hasWhiteSpace(username)) {
+      alert("The username field must be at least 5 characters without spaces");
+      return false;
     }
+    if (password.length < 5 || hasWhiteSpace(password)) {
+      alert("The password field must be at least 5 characters without spaces");
+      return false;
+    }
+
+  }
+
+  function hasWhiteSpace(s) {
+    return s.indexOf(' ') >= 0;
+  }
 </script>
 </html>
