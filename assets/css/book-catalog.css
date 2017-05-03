@@ -36,6 +36,9 @@
     background-color: white;
     box-shadow: 1px 4px 16px 0 rgba(136, 136, 136, .14);
 }
+.book--box:last-of-type {
+  margin-bottom: 15%;
+}
 .book--star
 {
     color: #fd9526;

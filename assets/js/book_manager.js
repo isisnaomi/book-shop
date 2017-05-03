@@ -10,7 +10,7 @@ function display_books(book_list, container, criteria, category){
       for (stars = 0; stars < book_rating; stars++){
         book_stars = book_stars + "<span class='glyphicon glyphicon-star book--star' aria-hidden='true'></span>";
       }
-      book_addcart = "<button type='button' id="+ book_list[i].id +" class='btn btn-danger'><span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span>Add to cart</button>";
+      book_addcart = "<button type='button' id="+ book_list[i].id +" class='btn btn-danger' onclick='cart.addItem("+book_list[i].id+", { name: \""+ book_list[i].name +"\", price: \""+book_list[i].price+"\", author: \""+ book_list[i].author +"\", photo: \""+book_list[i].photo+"\" }); redrawCart()'><span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span>Add to cart</button>";
       book_details = "<button class='btn-info' onclick='display_book_details("+book_list[i].id+")'>See details ...</button>";
       book_shop = "<div class='col-xs-3'><div class='book--shop'><h3> $"+book_list[i].price+"</h3><p>Free shipping</p>"+book_addcart+"</div></div>";
       book_cover = "<div class='col-sm-2 col-sm-offset-1'><img class='book--cover' src='assets/img/"+book_list[i].photo+"'/></div>";

@@ -1,0 +1,171 @@
+
+#cart,
+#cart::before,
+#cart::after,
+#cart *,
+#cart *::before,
+#cart *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#cart {
+  overflow: hidden;
+  position: fixed;
+  top: 85%;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  padding: 60px 60px 20px;
+  background-color: #8bcad7;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  transition: top 1000ms, left 100ms, height 1000ms;
+}
+
+
+#cart::before {
+  content: "Click para ver el carrito";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0px 0px 2px darkblue;
+  text-align: center;
+  transition: font-size 800ms, color 300ms;
+}
+
+#cart:hover::before {
+  color: #ccc;
+}
+
+#cart.visible {
+  overflow-y: auto;
+  z-index: 999;
+  height: 100%;
+  top: 65px;
+}
+
+#cart.visible::before {
+  font-size: 0;
+}
+
+#cart.visible #close-cart {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#cart #close-cart::before,
+#cart #close-cart::after {
+  font-size: 0;
+  transition: font-size 400ms;
+}
+
+#cart.visible #close-cart::before,
+#cart.visible #close-cart::after {
+  content: "l";
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: white;
+}
+
+#close-cart::before {
+  transform: rotate(45deg);
+}
+
+#close-cart::after {
+  transform: rotate(-45deg);
+}
+
+#cart-content {
+  overflow: hidden;
+}
+
+#cart .cart-item {
+  display: inline-block;
+  float: left;
+  width: 33%;
+  margin-right: 0%;
+  margin-bottom: 40px;
+}
+
+#cart .cart-item-container {
+  margin: 0 auto;
+}
+
+#cart .cart-item-attributes-container {
+  display: inline-block;
+  max-width: 75%;
+  padding-left: 20px;
+}
+
+#cart .cart-item-attribute {
+  display: block;
+}
+
+#cart .cart-item-attribute.name {
+  font-size: 2rem;
+}
+
+#cart .cart-item-attribute.author {
+  font-size: 1.7rem;
+}
+
+#cart .cart-item-attribute.price {
+  font-size: 1.7rem;
+  color: green;
+}
+
+#cart .cart-item-attribute.ammount {
+  font-size: 1.7rem;
+}
+
+#cart .cart-item-attribute.ammount button {
+  padding: 0 5px;
+}
+
+#cart img {
+  float: left;
+  vertical-align: top;
+  max-width: 25%;
+}
+
+#cart .the-cart-total {
+  font-size: 22px;
+}
+
+.the-cart-total #total-ammount {
+  display: inline-block;
+  color: green;
+  margin-top: 10px;
+}
+
+.the-pay-button {
+  display: inline-block !important;
+  padding: 15px 45px !important;
+  border: 0;
+  background-color: green;
+  color: white;
+  border-radius: 3px;
+}
+
+#cart-visibility-handler.hidden {
+  display: none;
+}

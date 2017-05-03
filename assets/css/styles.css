@@ -21,6 +21,7 @@ a
 }
 .navbar
 {
+    z-index: 1;
     padding-top: 15px;
 
     background: white;
