@@ -10,6 +10,7 @@ $book_catalog = list_books();
 <body>
 <?php include 'partials/navigation.php';?>
 
+
     <!-- Page Content -->
     <div class="container-fluid">
       <div class="catalog--jumbotron jumbotron">

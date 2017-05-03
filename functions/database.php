@@ -2,10 +2,10 @@
 
 
 function run_sql_query($query){
-  $server = "localhost";
-  $user = "root";
-  $password = "root";
-  $db = "bookshop";
+  $server = "davidh.heliohost.org";
+  $user = "davidh_dev";
+  $password = "programacionweb";
+  $db = "davidh_bookstore";
 
   $connection = mysqli_connect($server, $user, $password, $db);
 
@@ -21,9 +21,8 @@ function run_sql_query($query){
   }
 
   mysqli_close($connection);
-
+    
   return $result;
 
 }
 
- ?>

@@ -1,11 +1,13 @@
+
 <!-- Navigation -->
 <nav class="navbar  navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-search">
 
+
           <form action="/book-store/search-result.php" method="get">
             <div class="input-group">
-              <input type="text" class="form-control" name="search-input" placeholder=" Search book...">
+              <input type="text" class="form   -control" name="search-input" placeholder=" Search book...">
 
             </div><!-- /input-group -->
           </form>
@@ -33,8 +35,23 @@
                 <li>
                     <a href="#">Shopping Cart</a>
                 </li>
+                    <?php
+                    session_start();
+                    if($_SESSION['user_type'] == 'admin') {
+                        echo ' <li><a href="manage-accounts.php">Manage accounts</a></li>';
+                    }
+                    ?>
                 <li>
-                    <a href="#">User</a>
+                    <?php
+
+                    if($_SESSION['actual_username'] != ''){
+                        echo '<a href="functions/logout_user.php">Logout</a>';
+
+                    }else{
+                        echo '<a onclick="document.getElementById(\'login-modal\').style.display=\'block\'"'.
+                            'style="width:auto; cursor: pointer">Login</a>';
+                    }
+                    ?>
                 </li>
             </ul>
         </div>
@@ -42,3 +59,11 @@
     </div>
     <!-- /.container -->
 </nav>
+
+<?php
+include 'partials/login.php';
+
+if(isset($_SESSION['status_message']) && $_SESSION['status_message'] != ''){
+    include 'partials/info-modal.php';
+}
+?>
