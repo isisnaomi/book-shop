@@ -20,11 +20,11 @@ if(isset($_POST['selected-book'])){
 <div class="container">
   <div class="form--box">
     <div class="row">
-      <div class="col-xs-12 text-center">
+      <div class="column-grid-xs-12 text-center">
         <h2>Edit book</h2>
       </div>
 
-      <div class="col-sm-8 col-sm-offset-2">
+      <div class="column-grid-sm-8 column-grid-sm-offset-2">
         <form enctype="multipart/form-data" name="edit-form" action="functions/edit_book.php" method="post" onsubmit="return validate()">
           <div class="form-group">
             <input style="display:none" type="text" class="form-control" id="id" name="id" readonly>
@@ -82,7 +82,7 @@ if(isset($_POST['selected-book'])){
             <input type="file" class="form-control" id="photo" name="photo">
           </div>
 
-          <button type="submit" name="submit" value="edit" class="btn btn-default">Submit</button>
+          <button type="submit" name="submit" value="edit" class="btn btn-simple">Submit</button>
           <a href="book-catalog.php" onclick='return confirm_cancel_action();'>Cancel</a>
         </form>
       </div>
@@ -136,6 +136,7 @@ if(isset($_POST['selected-book'])){
         alert("Price must be filled out");
         return false;
       }
+
     }
 </script>
 </html>

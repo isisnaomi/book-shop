@@ -14,16 +14,16 @@ if(isset($_GET['selected-book'])){
 <div class="container">
   <div class="form--box">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="column-grid-xs-12">
         <input style="display:none" type="text" class="form-control" id="id" name="id" readonly>
 
         <div class="book--box">
           <div class="row">
-              <div class="col-lg-12">
-                  <div class="col-sm-2 col-sm-offset-1">
+              <div class="column-grid-lg-12">
+                  <div class="column-grid-sm-2 column-grid-sm-offset-1">
                     <img class="book--cover" id='photo' src="assets/img/book--banner_cover.jpg" />
                   </div>
-                  <div class="col-sm-5" >
+                  <div class="column-grid-sm-5" >
                     <h3 id="name">The Light Between Oceans</h3>
                     <h5 id="author">by M. l. Stedman</h5><h5 id="category" class="book--category">Novel</h5>
                     <h6 id="editor"></h6>
@@ -36,7 +36,7 @@ if(isset($_GET['selected-book'])){
                       a day's journey from the coast.
                     </p>
                   </div>
-                  <div class="col-xs-3 col-sm-offset-1">
+                  <div class="column-grid-xs-3 column-grid-sm-offset-1">
                     <div class="book--shop">
                       <h3 id="price">$14.99</h3>
                       <p>

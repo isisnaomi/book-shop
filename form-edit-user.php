@@ -10,7 +10,7 @@
 <div class="container">
   <div class="form--box">
     <div class="row">
-      <div class="col-xs-12 text-center">
+      <div class="column-grid-xs-12 text-center">
         <h2>Edit user</h2>
       </div>
 
@@ -21,7 +21,7 @@
       $user = mysqli_fetch_array($result ,MYSQLI_ASSOC);
       ?>
 
-      <div class="col-sm-8 col-sm-offset-2">
+      <div class="column-grid-sm-8 column-grid-sm-offset-2">
         <form name="create-user-form" action="functions/edit_user.php" onsubmit="return validate(this)" method="post">
           <input type="hidden" class="form-control" name="id" value="<?php echo $user['id'] ?>">
           <div class="form-group">
@@ -50,7 +50,7 @@
             </select>
           </div>
 
-          <input type="submit" class="btn btn-default" value="Save user">
+          <input type="submit" class="btn btn-simple" value="Save user">
 
         </form>
       </div>

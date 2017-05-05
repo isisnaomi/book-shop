@@ -14,14 +14,13 @@ if(isset($_POST["id"]) && isset($_POST["name"]) && isset($_POST["category"]) && 
   price = '" . $_POST["price"] ."'
   WHERE id = '".$_POST["id"]."' ";
 
-
-
   run_sql_query($query);
+
   if(isset($_FILES["photo"])){
     $id = $_POST["id"];
     $info = pathinfo($_FILES['photo']['name']);
     $ext = $info['extension']; // get the extension of the file
-    $image_file_name = md5($id).".".$ext;
+    $image_file_name = md5($id).".jpg";
 
     $target = '../../cover_images/'.$image_file_name;
     move_uploaded_file( $_FILES['photo']['tmp_name'], $target);
@@ -38,5 +37,6 @@ if(isset($_POST["id"]) && isset($_POST["name"]) && isset($_POST["category"]) && 
   header("location: /book-store/book-catalog.php");
 
 } else {
+
   header("location: /book-store/book-catalog.php");
 }

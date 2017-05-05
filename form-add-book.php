@@ -8,11 +8,11 @@
 <div class="container">
   <div class="form--box">
     <div class="row">
-      <div class="col-xs-12 text-center">
+      <div class="column-grid-xs-12 text-center">
         <h2>Add new book</h2>
       </div>
 
-      <div class="col-sm-8 col-sm-offset-2">
+      <div class="column-grid-sm-8 column-grid-sm-offset-2">
         <form enctype="multipart/form-data" name="add-form" onsubmit=" return validate()" action="functions/add_book.php" method="post">
           <div class="form-group">
             <label for="name">Name:</label>
@@ -67,7 +67,7 @@
             <input type="file" class="form-control" id="photo" name="photo">
           </div>
 
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-simple">Submit</button>
           <a href="book-catalog.php" onclick='return confirm_cancel_action();'>Cancel</a>
         </form>
       </div>

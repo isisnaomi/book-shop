@@ -15,10 +15,10 @@ $book_catalog = list_books();
     <div class="container-fluid">
       <div class="catalog--banner banner">
         <div class="row">
-          <div class="col-sm-4 col-sm-offset-2">
+          <div class="column-grid-sm-4 column-grid-sm-offset-2">
             <img class="catalog--banner_book" src="assets/img/book--banner_cover.jpg" />
           </div>
-          <div class="col-sm-4 col-sm-offset-0">
+          <div class="column-grid-sm-4 column-grid-sm-offset-0">
             <h3>The Light Between Oceans</h3>
             <h5>by M. l. Stedman</h5>
             <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -40,21 +40,21 @@ $book_catalog = list_books();
     <div class="container">
       <div class="catalog--options">
         <div class="row">
-          <div class="col-sm-8 col-sm-offset-2 text-center">
+          <div class="column-grid-sm-8 column-grid-sm-offset-2 text-center">
             <div class="btn-group btn-group-xs" role="group" aria-label="...">
-              <button type="button" class="btn btn-default" value="science fiction">Science Fiction</button>
-              <button type="button" class="btn btn-default" value="drama">Drama</button>
-              <button type="button" class="btn btn-default" value="horror">Horror</button>
-              <button type="button" class="btn btn-default" value="romance">Romance</button>
-              <button type="button" class="btn btn-default" value="novel">Novel</button>
-              <button type="button" class="btn btn-default" value="mystery">Mystery</button>
-              <button type="button" class="btn btn-default" value="health">Health</button>
-              <button type="button" class="btn btn-default" value="travel">Travel</button>
-              <button type="button" class="btn btn-default" value="history">History</button>
-              <button type="button" class="btn btn-default" value="math">Math</button>
-              <button type="button" class="btn btn-default" value="science">Science</button>
-              <button type="button" class="btn btn-default" value="comics">Comics</button>
-              <button type="button" class="btn btn-default" value="religion">Religion</button>
+              <button type="button" class="btn btn-simple" value="science fiction">Science Fiction</button>
+              <button type="button" class="btn btn-simple" value="drama">Drama</button>
+              <button type="button" class="btn btn-simple" value="horror">Horror</button>
+              <button type="button" class="btn btn-simple" value="romance">Romance</button>
+              <button type="button" class="btn btn-simple" value="novel">Novel</button>
+              <button type="button" class="btn btn-simple" value="mystery">Mystery</button>
+              <button type="button" class="btn btn-simple" value="health">Health</button>
+              <button type="button" class="btn btn-simple" value="travel">Travel</button>
+              <button type="button" class="btn btn-simple" value="history">History</button>
+              <button type="button" class="btn btn-simple" value="math">Math</button>
+              <button type="button" class="btn btn-simple" value="science">Science</button>
+              <button type="button" class="btn btn-simple" value="comics">Comics</button>
+              <button type="button" class="btn btn-simple" value="religion">Religion</button>
             </div>
           </div>
         </div>
@@ -67,11 +67,11 @@ $book_catalog = list_books();
 
         <div class="book--box">
           <div class="row">
-              <div class="col-lg-12">
-                  <div class="col-sm-2 col-sm-offset-1">
+              <div class="column-grid-lg-12">
+                  <div class="column-grid-sm-2 column-grid-sm-offset-1">
                     <img class="book--cover" src="assets/img/book--banner_cover.jpg" />
                   </div>
-                  <div class="col-sm-5" >
+                  <div class="column-grid-sm-5" >
                     <h3>The Light Between Oceans</h3>
                     <h5>by M. l. Stedman</h5><h5 class="book--category">Novel</h5>
                     <span class="glyphicon glyphicon-star book--star" aria-hidden="true"></span>
@@ -87,13 +87,13 @@ $book_catalog = list_books();
                     </p>
                     <a href="#">See details ...</a>
                   </div>
-                  <div class="col-xs-3 col-sm-offset-1">
+                  <div class="column-grid-xs-3 column-grid-sm-offset-1">
                     <div class="book--shop">
                       <h3>$14.99</h3>
                       <p>
                         Free shipping
                       </p>
-                      <button type="button" class="btn btn-danger">
+                      <button type="button" class="btn btn-red">
                         <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
                         Add to cart
                       </button>

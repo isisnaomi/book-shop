@@ -8,11 +8,11 @@
 
     <title>Bookshop</title>
 
-    <!-- Bootstrap Core CSS -->
+    <!-- Bookstrap -->
     <link href="assets/css/bookstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="assets/css/styles.css" rel="stylesheet">
+    <!-- Partial CSS -->
     <link href="assets/css/book-catalog.css" rel="stylesheet">
     <link href="assets/css/cart.css" rel="stylesheet">
     <link href="assets/css/login.css" rel="stylesheet">

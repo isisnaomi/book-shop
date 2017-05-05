@@ -18,11 +18,11 @@ $book_catalog = search_books(($_GET["search-input"]));
 
     <div class="book--box">
       <div class="row">
-          <div class="col-lg-12">
-              <div class="col-sm-2 col-sm-offset-1">
+          <div class="column-grid-lg-12">
+              <div class="column-grid-sm-2 column-grid-sm-offset-1">
                 <img class="book--cover" src="assets/img/book--banner_cover.jpg" />
               </div>
-              <div class="col-sm-5" >
+              <div class="column-grid-sm-5" >
                 <h3>The Light Between Oceans</h3>
                 <h5>by M. l. Stedman</h5><h5 class="book--category">Novel</h5>
                 <span class="glyphicon glyphicon-star book--star" aria-hidden="true"></span>
@@ -38,13 +38,13 @@ $book_catalog = search_books(($_GET["search-input"]));
                 </p>
                 <a href="#">See details ...</a>
               </div>
-              <div class="col-xs-3 col-sm-offset-1">
+              <div class="column-grid-xs-3 column-grid-sm-offset-1">
                 <div class="book--shop">
                   <h3>$14.99</h3>
                   <p>
                     Free shipping
                   </p>
-                  <button type="button" class="btn btn-danger">
+                  <button type="button" class="btn btn-red">
                     <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
                     Add to cart
                   </button>

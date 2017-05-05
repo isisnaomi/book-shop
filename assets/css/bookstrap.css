@@ -1,6 +1,8 @@
 /*---General---*/
 body
 {
+    font-family: 'Roboto', sans-serif !important;
+
     margin: 0;
 
     background: #f2f5f7 !important;
@@ -16,9 +18,8 @@ a
 {
     text-decoration: none;
 
-    color: #337ab7;
+    color: #4db1c4;
 }
-
 img
 {
     vertical-align: middle;
@@ -40,161 +41,172 @@ img
     padding-right: 15px;
     padding-left: 15px;
 }
+.container-fluid
+{
+    padding: 0;
+}
+
 .row
 {
     margin-right: -15px;
     margin-left: -15px;
 }
 
-.col-sm-1,
-.col-sm-2,
-.col-sm-3,
-.col-sm-4,
-.col-sm-5,
-.col-sm-6,
-.col-sm-7,
-.col-sm-8,
-.col-sm-9,
-.col-sm-10,
-.col-sm-11,
-.col-sm-12
+.column-grid-sm-1,
+.column-grid-sm-2,
+.column-grid-sm-3,
+.column-grid-sm-4,
+.column-grid-sm-5,
+.column-grid-sm-6,
+.column-grid-sm-7,
+.column-grid-sm-8,
+.column-grid-sm-9,
+.column-grid-sm-10,
+.column-grid-sm-11,
+.column-grid-sm-12
 {
     float: left;
 
     padding: 0 10px;
 }
-.col-sm-12
+.column-grid-sm-12
 {
     width: 100%;
 }
-.col-sm-11
+.column-grid-sm-11
 {
     width: 91.66666667%;
 }
-.col-sm-10
+.column-grid-sm-10
 {
     width: 83.33333333%;
 }
-.col-sm-9
+.column-grid-sm-9
 {
     width: 75%;
 }
-.col-sm-8
+.column-grid-sm-8
 {
     width: 66.66666667%;
 }
-.col-sm-7
+.column-grid-sm-7
 {
     width: 58.33333333%;
 }
-.col-sm-6
+.column-grid-sm-6
 {
     width: 50%;
 }
-.col-sm-5
+.column-grid-sm-5
 {
     width: 41.66666667%;
 }
-.col-sm-4
+.column-grid-sm-4
 {
     width: 33.33333333%;
 }
-.col-sm-3
+.column-grid-sm-3
 {
     width: 25%;
 }
-.col-sm-2
+.column-grid-sm-2
 {
     width: 16.66666667%;
 }
-.col-sm-1
+.column-grid-sm-1
 {
     width: 8.33333333%;
 }
-.col-sm-offset-12
+.column-grid-sm-offset-12
 {
     margin-left: 100%;
 }
-.col-sm-offset-11
+.column-grid-sm-offset-11
 {
     margin-left: 91.66666667%;
 }
-.col-sm-offset-10
+.column-grid-sm-offset-10
 {
     margin-left: 83.33333333%;
 }
-.col-sm-offset-9
+.column-grid-sm-offset-9
 {
     margin-left: 75%;
 }
-.col-sm-offset-8
+.column-grid-sm-offset-8
 {
     margin-left: 66.66666667%;
 }
-.col-sm-offset-7
+.column-grid-sm-offset-7
 {
     margin-left: 58.33333333%;
 }
-.col-sm-offset-6
+.column-grid-sm-offset-6
 {
     margin-left: 50%;
 }
-.col-sm-offset-5
+.column-grid-sm-offset-5
 {
     margin-left: 41.66666667%;
 }
-.col-sm-offset-4
+.column-grid-sm-offset-4
 {
     margin-left: 33.33333333%;
 }
-.col-sm-offset-3
+.column-grid-sm-offset-3
 {
     margin-left: 25%;
 }
-.col-sm-offset-2
+.column-grid-sm-offset-2
 {
     margin-left: 16.66666667%;
 }
-.col-sm-offset-1
+.column-grid-sm-offset-1
 {
     margin-left: 8.33333333%;
 }
-.col-sm-offset-0
+.column-grid-sm-offset-0
 {
     margin-left: 0;
 }
 
 /*---Buttons---*/
-.btn-default
+.btn-simple
 {
+    margin: 5px;
+    padding: 10px 14px;
+
     color: #333;
+    border: none;
     border-color: #ccc;
-    background-color: #fff;
+    border-radius: 2px;
+    background-color: #f7f7f7;
+    box-shadow: none;
 }
-.btn-primary
+.btn-blue
 {
+    margin: 5px;
+    padding: 10px 14px;
+
     color: #fff;
-    border-color: #2e6da4;
-    background-color: #337ab7;
-}
-.btn-success
-{
-    color: #fff;
-    border-color: #4cae4c;
-    background-color: #5cb85c;
-}
-.btn-info
-{
-    color: #fff;
+    border: none;
     border-color: #46b8da;
+    border-radius: 2px;
     background-color: #5bc0de;
+    box-shadow: none;
 }
 
-.btn-danger
+.btn-red
 {
+    margin: 5px;
+    padding: 10px 14px;
+
     color: #fff;
+    border: none;
     border-color: #d43f3a;
+    border-radius: 2px;
     background-color: #d9534f;
+    box-shadow: none;
 }
 /*---Navbar---*/
 
@@ -271,6 +283,34 @@ img
     padding-top: 15px;
     padding-bottom: 15px;
 }
+.navbar-brand
+{
+    font-size: 20px;
+
+    position: absolute;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: black;
+}
+.navbar
+{
+    font-size: 13px;
+
+    z-index: 1;
+
+    padding-top: 15px;
+
+    background: white;
+}
+.navbar-search
+{
+    position: absolute;
+    right: 20px;
+
+    width: 200px;
+}
 /*---banner---*/
 .banner
 {
@@ -286,7 +326,7 @@ img
 {
     max-width: 100%;
 }
-/*---Window---*/
+/*---Window modal---*/
 .modal
 {
     position: fixed;
@@ -333,4 +373,35 @@ img
 .navbar-collapse:after
 {
     clear: both;
+}
+
+
+.users-table
+{
+    margin-top: 10px;
+    padding: 10px;
+
+    background-color: white;
+}
+
+.users-table thead
+{
+    margin-top: 50px;
+
+    background-color: #8bcad7;
+}
+td
+{
+    padding: 10px 30px;
+}
+input,
+textarea
+{
+    width: 100%;
+    margin: 10px;
+    padding: 5px;
+}
+.form-group
+{
+    margin: 10px;
 }
