@@ -9,7 +9,7 @@
     <title>Bookshop</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bookstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">

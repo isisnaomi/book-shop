@@ -6,13 +6,13 @@
 {
     padding: 20px 0;
 }
-.catalog--jumbotron
+.catalog--banner
 {
     color: white;
     border-radius: 0 !important;
     background: #8bcad7;
 }
-.catalog--jumbotron_book
+.catalog--banner_book
 {
     max-width: 100%;
     height: 300px;

@@ -21,9 +21,9 @@ if(isset($_POST["id"]) && isset($_POST["name"]) && isset($_POST["category"]) && 
     $id = $_POST["id"];
     $info = pathinfo($_FILES['photo']['name']);
     $ext = $info['extension']; // get the extension of the file
-    $image_file_name = $id.".".$ext;
+    $image_file_name = md5($id).".".$ext;
 
-    $target = '../assets/img/'.$image_file_name;
+    $target = '../../cover_images/'.$image_file_name;
     move_uploaded_file( $_FILES['photo']['tmp_name'], $target);
 
     $query = "UPDATE books

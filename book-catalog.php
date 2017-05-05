@@ -23,7 +23,7 @@ $book_catalog = list_books();
     <div class="row">
         <div class="col-lg-12">
             <div class="col-sm-2 col-sm-offset-1">
-              <img class="book--cover" src="assets/img/book--jumbotron_cover.jpg" />
+              <img class="book--cover" src="assets/img/book--banner_cover.jpg" />
             </div>
             <div class="col-sm-5" >
               <h3>The Light Between Oceans</h3>

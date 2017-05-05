@@ -13,7 +13,7 @@ function display_books(book_list, container, criteria, category){
       book_addcart = "<button type='button' id="+ book_list[i].id +" class='btn btn-danger' onclick='cart.addItem("+book_list[i].id+", { name: \""+ book_list[i].name +"\", price: \""+book_list[i].price+"\", author: \""+ book_list[i].author +"\", photo: \""+book_list[i].photo+"\" }); redrawCart()'><span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span>Add to cart</button>";
       book_details = "<button class='btn-info' onclick='display_book_details("+book_list[i].id+")'>See details ...</button>";
       book_shop = "<div class='col-xs-3'><div class='book--shop'><h3> $"+book_list[i].price+"</h3><p>Free shipping</p>"+book_addcart+"</div></div>";
-      book_cover = "<div class='col-sm-2 col-sm-offset-1'><img class='book--cover' src='assets/img/"+book_list[i].photo+"'/></div>";
+      book_cover = "<div class='col-sm-2 col-sm-offset-1'><img class='book--cover' src='../../../cover_images/"+book_list[i].photo+"'/></div>";
       book_info = "<div class='col-sm-6' ><h3>"+book_list[i].name+"</h3><h5>"+book_list[i].author+"</h5><h5 class='book--category'>"+book_list[i].category+"</h5>"+book_stars+"<p>"+book_list[i].description+"</p>"+book_details+"</div>";
       container.innerHTML = container.innerHTML+ "<div class='book--box'><div class='row'><div class='col-sm-12'>"+book_cover+book_info+book_shop+"</div></div>";
     }
@@ -33,7 +33,7 @@ function display_books_admin(book_list, container, criteria){
     book_options = "<div class='btn-group' role='group'><form action='form-edit-book.php' method='post'><button type='submit' name='selected-book' value='"+book_list[i].id+"'class='btn btn-default'>Edit</button></form><form action='functions/delete_book.php' onSubmit='return confirm_delete_book()' method='post'><button type='submit' name='selected-book' value='"+book_list[i].id+"'class='btn btn-default'>Delete</button></form></div>";
     book_details = "<button class='btn-info' onclick='display_book_details("+book_list[i].id+")'>See details ...</button>";
     book_shop = "<div class='col-xs-3'><div class='book--shop'><h3> $"+book_list[i].price+"</h3><p>Free shipping</p>"+book_options+"</div></div>";
-    book_cover = "<div class='col-sm-2 col-sm-offset-1'><img class='book--cover' src='assets/img/"+book_list[i].photo+"'/></div>";
+    book_cover = "<div class='col-sm-2 col-sm-offset-1'><img class='book--cover' src='../../../cover_images/"+book_list[i].photo+"'/></div>";
     book_info = "<div class='col-sm-6' ><h3>"+book_list[i].name+"</h3><h5>"+book_list[i].author+"</h5><h5 class='book--category'>"+book_list[i].category+"</h5>"+book_stars+"<p>"+book_list[i].description+"</p> "+book_details+"</div>";
     container.innerHTML = container.innerHTML+ "<div class='book--box'><div class='row'><div class='col-sm-12'>"+book_cover+book_info+book_shop+"</div></div>";
   }

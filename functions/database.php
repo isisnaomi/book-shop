@@ -21,8 +21,7 @@ function run_sql_query($query){
   }
 
   mysqli_close($connection);
-    
+
   return $result;
 
 }
-
