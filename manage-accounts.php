@@ -15,7 +15,8 @@
       </div>
 
       <div class="column-grid-sm-8 column-grid-sm-offset-2">
-        <a class="btn btn-simple column-grid-xs-3 column-grid-xs-offset-9" href="form-create-user.php">Create new account</a>
+        <a class="btn btn-simple column-grid-xs-3 column-grid-xs-offset-9"
+           style="background-color: #2fd952" href="form-create-user.php">Create new account</a>
         <table class="table users-table" style="margin-bottom: 10px">
 
           <thead>
@@ -34,7 +35,7 @@
                 '<td style="display: none">'.$user['id'].'</th>'.
                 '<td>'.$user['username'].'</th>'.
                 '<td>'.$user['type'].'</th>'.
-                '<td><a href="form-edit-user.php?user_id='.$id.'" class="btn btn-xs btn-warning">Edit user</a>'.
+                '<td><a href="form-edit-user.php?user_id='.$id.'" class="btn btn-xs ">Edit user</a>'.
                 '<a name="'.$id.'" onclick="confirmDelete(this)" class="btn btn-xs btn-red">Delete user</a></td>'.
                 '</tr>';
           }
