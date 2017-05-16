@@ -9,7 +9,7 @@ function getCookies () {
   let cookies = {}
   let cookiesAsStrings = document.cookie.split(';')
 
-  cookiesAsStrings.forEach(fun:cction (cookieAsString) {
+  cookiesAsStrings.forEach(function (cookieAsString) {
     var key = cookieAsString.split('=')[0].trim()
     var val = cookieAsString.split('=')[1].trim()
 
@@ -27,7 +27,7 @@ function getCookie (cookieName) {
 
 function getCookieAsJSON (cookieName) {
   let cookie = getCookie(cookieName)
-  if (cookie !== '') {
+  if (cookie !== '' && typeof cookie !== 'undefined' && cookie !== undefined) {
     return JSON.parse(cookie)
   } else {
     return null
