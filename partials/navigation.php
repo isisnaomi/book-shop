@@ -23,12 +23,15 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" style="padding-top: 20px">
                 <li>
                     <a href="book-catalog.php">Manager</a>
                 </li>
                 <li>
                     <a href="#">Shopping Cart</a>
+                </li>
+                <li>
+                    <a href="suggestions.php">Contact</a>
                 </li>
                     <?php
                     session_start();
