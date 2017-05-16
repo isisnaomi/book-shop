@@ -1,13 +1,12 @@
 <?php
 
-$name = $_POST['name'];
+$email = $_POST['email'];
 $suggestion = $_POST['suggestion'];
 
-$message = "Name: $name \n Suggestion: $suggestion";
-
+$message = $suggestion;
 $to     = 'davidhernandeze@gmail.com';
 $subject    = 'Suggestion';
-$headers = 'From: contact@bookshoop.com';
+$headers = "From: $email";
 
 $headers = 'From: webmaster@example.com' . "\r\n" .
     'Cc:  mdoming@uady.mx' . "\r\n" .

@@ -16,8 +16,8 @@
             <div class="column-grid-sm-8 column-grid-sm-offset-2">
                 <form name="suggestion-form" action="functions/email_sender.php" onsubmit="return validate(this)" method="post">
                     <div class="form-group">
-                        <label for="name">Your name:</label>
-                        <input type="text" class="form-control" id="name" name="name">
+                        <label for="email">Your email:</label>
+                        <input type="text" class="form-control" id="email" name="email">
                     </div>
                     <div class="form-group">
                         <label for="suggestion">Suggestion:</label>
@@ -38,10 +38,10 @@
 
     function validate(form){
 
-        var name = document.forms["suggestion-form"]["name"].value;
+        var email = document.forms["suggestion-form"]["email"].value;
         var suggestion = document.forms["suggestion-form"]["suggestion"].value;
 
-        if (name.length < 1) {
+        if (email.length < 1) {
             alert("You must enter a name);
             return false;
         }
