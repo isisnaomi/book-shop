@@ -2,8 +2,12 @@
 <?php
 
 session_start();
-$_SESSION['user_type'] = '';
-$_SESSION['actual_username'] = '';
+
+if (!isset($_SESSION['user_type']) || !isset($_SESSION['actual_username']) ) {
+    $_SESSION['user_type'] = '';
+    $_SESSION['actual_username'] = '';
+}
+
 
 ?>
 
@@ -13,7 +17,7 @@ $_SESSION['actual_username'] = '';
       <div class="navbar-search">
 
 
-          <form action="../search-result.php" method="get">
+          <form action="/~equipo2/search-result.php" method="get">
             <div class="input-group">
               <input type="text" class="form   -control" name="search-input" placeholder=" Search book...">
 
@@ -38,7 +42,7 @@ $_SESSION['actual_username'] = '';
                 </li>
                     <?php
                     if($_SESSION['user_type'] == 'admin') {
-                        echo ' <li><a href="book-catalog.php">Manager</a></li>';
+                        echo ' <li><a href="/~equipo2/book-catalog.php">Manager</a></li>';
                     }
                     ?>
                 <li>
@@ -46,14 +50,14 @@ $_SESSION['actual_username'] = '';
                 </li>
                     <?php
                     if($_SESSION['user_type'] == 'admin') {
-                        echo ' <li><a href="manage-accounts.php">Manage accounts</a></li>';
+                        echo ' <li><a href="/~equipo2/manage-accounts.php">Manage accounts</a></li>';
                     }
                     ?>
                 <li>
                     <?php
 
                     if($_SESSION['actual_username'] != ''){
-                        echo '<a href="functions/logout_user.php">Logout</a>';
+                        echo '<a href="/~equipo2/functions/logout_user.php">Logout</a>';
 
                     }else{
                         echo '<a onclick="document.getElementById(\'login-modal\').style.display=\'block\'"'.

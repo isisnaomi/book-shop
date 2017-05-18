@@ -25,12 +25,12 @@ if ($result) {
 
     $_SESSION["status_message"] = "User edited correctly";
 
-    header("location: /book-store/manage-accounts.php");
+    header("location: /~equipo2/manage-accounts.php");
 
 } else {
 
     $_SESSION["status_message"] = "Unexpected error";
 
-    header("location: /book-store/manage-accounts.php");
+    header("location: /~equipo2/manage-accounts.php");
 }
 

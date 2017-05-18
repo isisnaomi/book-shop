@@ -6,7 +6,7 @@ session_abort();
 
 if($privileges != 'admin'){
     $_SESSION["status_message"] = "You don´t have privileges to access";
-    header("location: /book-store/index.php");
+    header("location: /~equipo2/index.php");
     return;
 }
 

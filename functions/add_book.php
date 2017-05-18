@@ -29,8 +29,8 @@ if(isset($_POST["name"]) && isset($_POST["editor"]) && isset($_POST["category"])
 
   run_sql_query($query);
 
-  header("location: /book-store/book-catalog.php");
+  header("location: /~equipo2/book-catalog.php");
 
 } else {
-  header("location: /book-store/form-add-book.php");
+  header("location: /~equipo2/form-add-book.php");
 }

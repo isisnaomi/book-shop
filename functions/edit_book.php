@@ -34,9 +34,9 @@ if(isset($_POST["id"]) && isset($_POST["name"]) && isset($_POST["category"]) && 
 
 
 
-  header("location: /book-store/book-catalog.php");
+  header("location: /~equipo2/book-catalog.php");
 
 } else {
 
-  header("location: /book-store/book-catalog.php");
+  header("location: /~equipo2/book-catalog.php");
 }

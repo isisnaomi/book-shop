@@ -252,7 +252,7 @@ $book_catalog = list_books();
       let template = `
       <div id='cart-item-`+id+`' class='cart-item'>
         <div class='cart-item-container'>
-          <img src='assets/img/`+item.photo+`'>
+          <img src='../../~equipo2/cover_images/`+item.photo+`'>
           <div class='cart-item-attributes-container'>
             <span class='cart-item-attribute name'>`+item.name+`</span>
             <span class='cart-item-attribute author'>`+item.author+`</span>

@@ -5,13 +5,13 @@ session_start();
 if ($_POST["username"] == '') {
 
     $_SESSION["status_message"] = "The username field is empty";
-    header("location: /book-store/index.php");
+    header("location: /~equipo2/index.php");
     return;
 }
 if ($_POST["password"] == '') {
 
     $_SESSION["status_message"] = "The password field is empty";
-    header("location: /book-store/index.php");
+    header("location: /~equipo2/index.php");
     return;
 }
 
@@ -32,12 +32,12 @@ if (mysqli_num_rows($result) > 0) {
     $_SESSION["user_type"] = $user['type'];
     $_SESSION["status_message"] = "Login successful";
 
-    header("location: /book-store/index.php");
+    header("location: /~equipo2/index.php");
 
 } else {
 
     $_SESSION["status_message"] = "The username is not valid";
 
-    header("location: /book-store/index.php");
+    header("location: /~equipo2/index.php");
 }
 

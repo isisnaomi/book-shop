@@ -17,5 +17,5 @@ mail($to, $subject, $message, $headers);
 session_start();
 $_SESSION["status_message"] = "Suggestion send";
 
-header("location: /book-store/index.php");
+header("location: /~equipo2/index.php");
 

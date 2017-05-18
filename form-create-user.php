@@ -13,7 +13,7 @@
       </div>
 
       <div class="column-grid-sm-8 column-grid-sm-offset-2">
-        <form name="create-user-form" action="functions/create_user.php" onsubmit="return validate(this)" method="post">
+        <form name="create-user-form" action="/~equipo2/functions/create_user.php" onsubmit="return validate(this)" method="post">
           <div class="form-group">
             <label for="username">Username:</label>
             <input type="text" class="form-control" id="name" name="username">
