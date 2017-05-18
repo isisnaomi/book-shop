@@ -143,6 +143,10 @@ $book_catalog = list_books();
 <script src="assets/js/cookies-charola.js"></script>
 <script src="assets/js/Cart.js"></script>
 <script>let cart = new Cart()</script>
+<script>
+  var session = <?php echo ($_SESSION['user_type']) ? 'true' : 'false'; ?>;
+  console.log(session);
+</script>
 
 <script>
   function countAmmount() {
@@ -276,6 +280,10 @@ $book_catalog = list_books();
 
 <script>
   function wasteclientsmoney () {
+    if (!session) {
+      alert("Debes iniciar sesión para poder comprar libros.");
+      return;
+    }
     if ( countAmmount() < 1 ) {
       alert('Nada que pagar')
       return
