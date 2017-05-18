@@ -44,7 +44,7 @@ function setCookieAsJSON (cookieName, cookieVal) {
 }
 
 function unsetCookie (cookieName) {
-  document.cookie = cookieName + '='
+  document.cookie = ''
 }
 
 function addToCookie (cookieName, key, val) {

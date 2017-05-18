@@ -8,7 +8,7 @@ $to     = 'davidhernandeze@gmail.com';
 $subject    = 'Suggestion';
 $headers = "From: $email";
 
-$headers = 'From: webmaster@example.com' . "\r\n" .
+$headers = 'From: davidhernandeze@gmail.com' . "\r\n" .
     'Cc:  mdoming@uady.mx' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 

@@ -12,7 +12,7 @@ if ($result) {
 
     $_SESSION["status_message"] = "User deleted";
 
-    header("location: /~equipo2/book-store/manage-accounts.php");
+    header("location: /~equipo2/manage-accounts.php");
 
 } else {
 
