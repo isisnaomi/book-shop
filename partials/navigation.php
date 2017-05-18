@@ -25,16 +25,15 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav" style="padding-top: 20px">
 
+                <li>
+                    <a href="index.php">Books</a>
+                </li>
                     <?php
                     session_start();
                     if($_SESSION['user_type'] == 'admin') {
                         echo ' <li><a href="book-catalog.php">Manager</a></li>';
                     }
                     ?>
-
-                <li>
-                    <a href="#">Shopping Cart</a>
-                </li>
                 <li>
                     <a href="suggestions.php">Contact</a>
                 </li>
