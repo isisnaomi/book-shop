@@ -1,11 +1,19 @@
 
+<?php
+
+session_start();
+$_SESSION['user_type'] = '';
+$_SESSION['actual_username'] = '';
+
+?>
+
 <!-- Navigation -->
 <nav class="navbar  navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-search">
 
 
-          <form action="/book-store/search-result.php" method="get">
+          <form action="../search-result.php" method="get">
             <div class="input-group">
               <input type="text" class="form   -control" name="search-input" placeholder=" Search book...">
 
@@ -29,7 +37,6 @@
                     <a href="index.php">Books</a>
                 </li>
                     <?php
-                    session_start();
                     if($_SESSION['user_type'] == 'admin') {
                         echo ' <li><a href="book-catalog.php">Manager</a></li>';
                     }

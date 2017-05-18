@@ -20,7 +20,7 @@ if(isset($_POST["name"]) && isset($_POST["editor"]) && isset($_POST["category"])
   $ext = $info['extension']; // get the extension of the file
   $image_file_name = md5($result).".".$ext;
 
-  $target = '../../cover_images/'.$image_file_name;
+  $target = '../~equipo2/cover_images/'.$image_file_name;
   move_uploaded_file( $_FILES['photo']['tmp_name'], $target);
 
   $query = "UPDATE books

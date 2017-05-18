@@ -2,10 +2,10 @@
 
 
 function run_sql_query($query){
-  $server = "davidh.heliohost.org";
-  $user = "davidh_dev";
-  $password = "programacionweb";
-  $db = "davidh_bookstore";
+  $server = "localhost";
+  $user = "equipo2";
+  $password = "equipo2";
+  $db = "equipo2_bookshop";
 
   $connection = mysqli_connect($server, $user, $password, $db);
 
