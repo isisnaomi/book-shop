@@ -280,12 +280,39 @@ $book_catalog = list_books();
       alert('Nada que pagar')
       return
     }
-    var really = confirm("¿Desperdiciar dinero en papel?")
+    var really = confirm("¿Estás seguro que deseas completar la transacción?")
 
     if ( really ) {
-      unsetCookie( "cart" )
-      alert( "Gracias por comprar en Libros Pronto SA de CV" )
-      redrawCart()
+      var index = cart.index()
+      for ( id in index ) {
+        console.log('elem' + id, index[id])
+
+        var bookName = index[id].name
+        let xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+          console.log(xhr)
+          if (xhr.readyState > 0) {
+            if (xhr.responseText === 'true') {
+              console.log('SUCCESSFUL SELL')
+              unsetCookie( "cart" )
+              alert( "Gracias por comprar en Libros Pronto SA de CV." )
+              redrawCart()
+            } else {
+              console.log('FAIL SELL')
+              alert( "Lo sentimos, actualmente solo contamos con " + xhr.responseText + " copias.")
+            }
+          } else {
+            console.error(xhr)
+          }
+        }
+
+        var ammount = index[id].ammount
+        if (!(ammount > 0)) continue
+
+        var urlParams = '?action=reduce' + '&ammount=' + ammount + '&book_id=' + id;
+        xhr.open('GET', 'functions/book_interface.php' + urlParams, true)
+        xhr.send(null)
+      }
     }
   }
 </script>
