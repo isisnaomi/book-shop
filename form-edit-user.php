@@ -33,7 +33,8 @@
             <input type="password" class="form-control"  name="password">
           </div>
           <div class="form-group">
-            <input type="checkbox" name="change_password" value="true"> Change password? <br>
+            <label for="change_password">Change password?</label>
+            <input type="checkbox" name="change_password" value="true" style="width: 10%">
           </div>
 
           <div class="form-group">
@@ -50,8 +51,8 @@
             </select>
           </div>
 
-          <input type="submit" class="btn btn-simple" value="Save user">
-
+          <input type="submit" class="btn btn-blue" value="Save user">
+          <input type="button" class="btn btn-red" onclick="location.href='/~equipo2/manage-accounts.php';" value="Cancel" />
         </form>
       </div>
     </div>

@@ -6,21 +6,36 @@ $username =  $_POST['username'];
 $password =  $_POST['password'];
 $type =  $_POST['type'];
 
-$query = $sentenciaSQL = "INSERT INTO users (username, password, type) ".
-    "VALUES ('" . $username . "', '" . $password . "', '" . $type . "')";
-
+$query = "SELECT * FROM users WHERE username ='" . $username . "'";
 $result = run_sql_query($query);
 
-if ($result) {
+if (mysqli_num_rows($result) > 0) {
 
-    $_SESSION["status_message"] = "User created correctly";
+    $_SESSION["status_message"] = "The username already exists";
 
-    header("location: /~equipo2/manage-accounts.php");
+    header("location: /~equipo2/form-create-user.php");
 
 } else {
 
-    $_SESSION["status_message"] = "Unexpected error";
+    $query = $sentenciaSQL = "INSERT INTO users (username, password, type) ".
+        "VALUES ('" . $username . "', '" . $password . "', '" . $type . "')";
 
-    header("location: /~equipo2/manage-accounts.php");
+    $result = run_sql_query($query);
+
+    if ($result) {
+
+        $_SESSION["status_message"] = "User created correctly";
+
+        header("location: /~equipo2/manage-accounts.php");
+
+    } else {
+
+        $_SESSION["status_message"] = "Unexpected error";
+
+        header("location: /~equipo2/manage-accounts.php");
+    }
+
+
 }
+
 

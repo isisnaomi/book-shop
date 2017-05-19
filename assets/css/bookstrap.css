@@ -196,6 +196,19 @@ img
     box-shadow: none;
 }
 
+.btn-yellow
+{
+    margin: 5px;
+    padding: 10px 14px;
+
+    color: #fff;
+    border: none;
+    border-color: #dad488;
+    border-radius: 2px;
+    background-color: #c9de58;
+    box-shadow: none;
+}
+
 .btn-red
 {
     margin: 5px;

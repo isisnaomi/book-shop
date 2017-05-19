@@ -31,7 +31,8 @@
             </select>
           </div>
 
-          <input type="submit" class="btn btn-simple" value="Save user">
+          <input type="submit" class="btn btn-blue" value="Save user">
+          <input type="button" class="btn btn-red" onclick="location.href='/~equipo2/manage-accounts.php';" value="Cancel" />
 
         </form>
       </div>
