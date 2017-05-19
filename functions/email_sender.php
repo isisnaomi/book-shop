@@ -3,19 +3,21 @@
 $email = $_POST['email'];
 $suggestion = $_POST['suggestion'];
 
-$message = $suggestion;
-$to     = 'davidhernandeze@gmail.com';
-$subject    = 'Suggestion';
-$headers = "From: $email";
 
-$headers = 'From: davidhernandeze@gmail.com' . "\r\n" .
-    'Cc:  mdoming@uady.mx' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+$to = "davidhernandeze@gmail.com"; // this is your Email address
+$from = $_POST['email']; // this is the sender's Email address
+$subject = "Atención al cliente";
+
+$message = $from . " escribio lo siguiente en la sección de contacto de la página bookshop:" . "\n\n" . $suggestion;
+
+$headers = $headers = "From: ".$from . "\r\n" .
+    "CC:  mdoming@uady.mx";
 
 mail($to, $subject, $message, $headers);
 
-session_start();
-$_SESSION["status_message"] = "Suggestion send";
 
-header("location: /~equipo2/index.php");
+
+echo '<script type="text/javascript">
+           window.location = "http://148.209.67.69/~equipo2/functions/email_sent.php"
+      </script>';
 
